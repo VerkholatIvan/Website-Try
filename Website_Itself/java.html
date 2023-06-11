@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        
+        <!-- header -->
+        <header class="header_java">
+            <a href="index.html" class="going-home"><h1 class="java_title">Web Development Coding | JavaScript</h1></a>
+        </header>
+        <a class="back" href="index.html">← back</a>
+
+
+        <!-- main info -->
+        <section class="info_introduce">
+            
+            <p>In this part, we are going to understand some basics of <code>JavaScript</code> and creating a simple calculator.</p>
+            <p>Mostly, this code is used with HTML to create some scripts in the website, for example a "back to top" button, which apperars after scrolling to the bottom of the site.</p>
+            <p>But here we are going to use JavaScript in the most straightforward way, like this:</p>
+            
+            <!-- count demonstration -->
+            <div class="code_example">
+                <div class="cmd_code">
+                    <script src="simple_math.js"></script>
+                    <div class="smpl-calc">
+                        <td>
+                            <input type="text"
+                            style="width: 20px;"
+                            maxlength="5"
+                            id="number1" />
+                            
+                        </td>
+                        <p>+</p>
+                        <td>
+                            <input type="text"
+                            style="width: 20px;"
+                            maxlength="5"
+                            id="number2" />
+                        </td>
+                    
+                        <td>
+                            <input type="button"
+                                name="count"
+                                value="count"
+                                style="width: 100px"
+                                onclick="add()" />
+                        </td> 
+                    </div>
+                
+                    <p>Result <input id=result></p> <br>
+                </div>
+            </div>
+             <p>Here is the full <code>JS code</code> of the example:</p>
+             
+             <div class="code_example">
+             <span class="cmd_code">
+                function add() { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;var num1, num2, out; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;num1 = parseInt(document.getElementById("number1").value); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;num2 = parseInt(document.getElementById("number2").value); <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;out = num1 + num2; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").value = out; <br>
+                }
+             </span>
+            </div>
+
+            <!-- further explanations -->
+            <p>Before coding in <code>JS</code> do not forget to create inputs in HTML like this:</p>
+            <img src="image src/just-plus.png" alt="just-plus" style=" height: 420px;"> 
+            <p>Let's break it down and understand what exactly I have done there.</p>
+             <p>Firstly, the <code>add</code> function was created.</p>
+             <div class="code_example">
+             <span class="cmd_code">
+                function add() {}
+             </span>
+            </div>
+
+             <p>Everything what is inside of the <code>"{}"</code> brackets is our programm, which will be activated after calling this function.</p>
+             <p>Secondly, we create three variables: <code>num1</code> for the first input, <code>num2</code> for the second input and <code>out</code> for the output</p>
+            <div class="code_example">
+                <span class="cmd_code">
+                    function add() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var num1, num2, out; <br>
+                    }
+                </span>
+            </div>
+
+            <p>Thirdly, we need to get the string input from the user and remade it into the integer using <code>parseInt()</code> command.</p>
+            <div class="code_example">
+                <span class="cmd_code">
+                    function add() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var num1, num2, out; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num1 = parseInt(document.getElementById("number1").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num2 = parseInt(document.getElementById("number2").value); <br>
+                    }
+                </span>
+            </div>
+
+             <p>And finally, find the sum of our given numbers and show the result using <code>document.getElementById("result").value = out;</code>.</p>
+             <div class="code_example">
+                <span class="cmd_code">
+                    function add() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var num1, num2, out; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num1 = parseInt(document.getElementById("number1").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num2 = parseInt(document.getElementById("number2").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;out = num1 + num2; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").value = out; <br>
+                    }
+                </span>
+            </div> <br>
+
+
+            <p>Try to rewrite code and understand how exactly it works, because only practice gives you experience.</p>
+            <p>Next, we are going to upgrade this code to make a simple calcualtor in the <a href="calculator_expl.html"><code class="c-link">Calculator section</code></a>.</p> <br> <br>
+
+        </section>
+    
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <section>
+        </section>
+    </footer>
+
+</body>
+</html>

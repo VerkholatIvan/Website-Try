@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div>
+
+        <header class="header_calc">
+            <a href="index.html" class="going-home"><h1 class="calc_title">Web Development Coding | Calculator</h1></a>
+        </header>
+        <a class="back" href="index.html">← back</a>
+        <section class="info_introduce">
+            
+            <p>Now we are going to update our previous code to make the counting tool.</p>
+            <p>This calculator is not impressive, but still a working tool for counting.</p>
+
+            <!-- Simple Calculator demonstration -->
+            <div class="code_example">
+                <div class="cmd_code">
+                    <script src="calc.js"></script>
+                    
+                    <div>
+                        <td>
+                            <input type="text"
+                            style="width: 20px;"
+                            maxlength="10"
+                            id="number1" />
+                            
+                        </td>
+
+                        <td>
+                            <input type="text"
+                            style="width: 20px;"
+                            maxlength="10"
+                            id="number2" />
+                        </td>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <td>
+                            <input type="button"
+                                class="bttns"
+                                name="plus"
+                                value="+"
+                                onclick="add()" />
+                        </td> 
+
+                        <td>
+                            <input type="button"
+                                class="bttns"
+                                name="minus"
+                                value="-"
+                                onclick="minus()" />
+                        </td> 
+
+                        <td>
+                            <input type="button"
+                                class="bttns"
+                                name="multiply"
+                                value="x"
+                                onclick="mult()" />
+                        </td> 
+                        
+                        <td>
+                            <input type="button"
+                                class="bttns"
+                                name="division"
+                                value="÷"
+                                onclick="division()" />
+                        </td> 
+                        <br>
+                    
+
+
+                    </div>
+                
+                    <p>Result <input id=result></p><br>
+                </div>
+            </div>
+
+            <!-- Explanations -->
+            <p>It's code is very similar to the previous one, but let us break it down as well.</p><br>
+            <p>Firstly, in <code>HTML</code> we change <code>"count"</code> button into mathematical symbols, such as plus or minus. Now let's see the <code>JS</code> code.</p>
+            <p>The full <code>JavaScript</code> code looks like this:</p>
+            <div class="code_example">
+                <span class="cmd_code">
+                    let num1, num2, out; <br>
+                    <br>
+                    function add() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num1 = parseInt(document.getElementById("number1").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num2 = parseInt(document.getElementById("number2").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if ((/^\d+$/.test(num1) == false) || (/^\d+$/.test(num1) == false)) { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = "Error" <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;else { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = num1 + num2; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").value = out; <br>
+                    } <br>
+                    <br>
+                    <br>
+                    function minus() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num1 = parseInt(document.getElementById("number1").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num2 = parseInt(document.getElementById("number2").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if ((/^\d+$/.test(num1) == false) || (/^\d+$/.test(num1) == false)) { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = "Error" <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;else { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = num1 - num2; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").value = out; <br>
+                    } <br>
+                    <br>
+                    <br>
+                    function division() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num1 = parseInt(document.getElementById("number1").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num2 = parseInt(document.getElementById("number2").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if ((/^\d+$/.test(num1) == false) || (/^\d+$/.test(num1) == false)){ <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = "Error" <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; } <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;else { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = num1 / num2; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;} <br>    
+                                &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").value = out; <br>
+                    } <br>
+                    <br>
+                    function mult() { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num1 = parseInt(document.getElementById("number1").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;num2 = parseInt(document.getElementById("number2").value); <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if ((/^\d+$/.test(num1) == false) || (/^\d+$/.test(num1) == false)) { <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = "Error no integers were found" <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;else { <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out = num1 * num2; <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;} <br>    
+                                &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").value = out; <br>
+                    } 
+
+                </span>
+               </div>
+            
+            <!-- Further exaplanations -->
+            <p>It can be seen that we have created three <code>let</code> type objects.</p>
+            <p>Is it known, that in JavaScript there are several object types:</p>
+            <p>● <code>var</code> – containers for storing data.</p>
+            <p>● <code>const</code> – unchangable storage.</p>
+            <p>● <code>let</code> – changeable storage, best suits math algorythms.</p> <br>
+
+            <p>In the HTML code, there were created two windows with option to fill it with numbers.</p>
+            <p>Each of these windows has names and it's values. So, the first number just called: <code>number1</code>.</p>
+            <p>After using the command <code>document.getElementById("").value</code>, we can find the given value by searching the same string name.</p> 
+            <p>Thus, by writing <code>document.getElementById("number1").value</code> we are finding the name and then it's value.</p> <br>
+
+            <p>It was also added <code>if else</code> function, which checks if there are intergers:</p>
+            <div class="code_example">
+                <span class="cmd_code">
+                    if ((/^\d+$/.test(num1) == false) || (/^\d+$/.test(num1) == false)) { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;out = "Error no integers were found" <br>
+                    } <br>
+                    else { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;out = num1 + num2; <br>
+                    }  
+                </span>
+               </div>
+            <p>Thanks to this check the user will be informed, that the inputs are incorrect.</p>
+            <p>To be more precise this command <code>/^\d+$/.test(num1)</code> tells if our variable contains only numbers. So, if it's false the programm gives us an Error.</p>
+            <p>In the end, we just need to make the programm to do a definite calculation, depends on the pressed button.</p> <br>            
+            <br>
+            <br>
+
+
+        </section>
+
+
+    </div>
+
+    <footer>
+        <section>
+        </section>
+    </footer>
+
+</body>
+
+</html>

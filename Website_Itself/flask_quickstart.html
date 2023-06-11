@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask QuickStart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    <div>
+        <header class="header_flask">
+            <a href="index.html" class="going-home"><h1 class="flask_title">Web Development Coding | Flask QuickStart</h1></a>
+        </header>
+        <a class="back" href="flask.html">← back</a>
+    </div>
+
+    <!-- main section -->
+    <section class="info_introduce">
+        <p>The most basic code we can write with <code>Flask</code> is this:</p>
+        <div class="code_example">
+            <span class="cmd_code">
+                from flask import Flask <br>
+                <br>
+                app = Flask(__name__) <br>
+                <br>
+                @app.route("/") <br>
+                def hello_world(): <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return "&lt;p&gt;Hello, World!&lt;/p&gt;"
+            </span>
+        </div>
+
+        <p>This little code will just create a basic page with one message.</p>
+        <p>However, how to see the result, since it is not the HTML file. Well, all you need to do is to write down this command in the terminal:</p>
+        <div class="code_example">
+            <span class="cmd_code">
+                >> flask --app hello run
+            </span>
+        </div>
+        <p>Using it you will have a working link. But do not forget to end the process by the <code>Ctrl+C</code> buttons, because while working, your computer becomes the server to your website, which makes you an easy target for hackers.</p>
+        <p>There's also a debugging mode, which allows one to see the errors if there are any.</p>
+        <p>To call it, all you need to do, is just add the <code>--debug</code> option:</p>
+        <div class="code_example">
+            <span class="cmd_code">
+                >> flask --app hello --debug run
+            </span>
+        </div>
+
+        <p>Regardless, let's discuss our little code.</p>
+        <p>Firts of all, we have imported <code>Flask</code>.</p>
+        <p>Then we need to create an instance of this class. The <code>__name__</code> is a useful and convenient shortcut for that and which is suitable for most cases.</p>
+        <p>When using <code>route()</code> we tell which URL the page will have.</p>
+        <p>So, basically we can have several routes with their own names:</p>
+        <div class="code_example">
+            <span class="cmd_code">
+                @app.route('/') <br>
+                def index(): <br>
+                    return 'Hello, user' <br>
+                <br>
+                @app.route('/weather') <br>
+                def weather(): <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return 'Today's weather is...'
+            </span>
+        </div>
+
+        <p>There are too many aspects, such as the other prpgramming languages, to tell everything here in the introduction to the Web Development Coding site.</p>
+        <p>But before ending this section let's discuss what can we use <code>Flask</code> for and why people don't want to use or on the contrary, would really like to.</p>
+        <p><code>Flask</code> can look difficult because of the unusual coding way. Anyway, there are some advantages of it:</p>
+        <p>• Flexible</p>
+        <p>• Easy to negotiate</p>
+        <p>• Lightweight</p>
+
+        <p>Still, cons such as lack of tools, more difficult to get familiar with a larger Flask apps and maintenance costs, usually discourages companies from using it. On the contrary, it still can be really useful working with small projects.</p>
+        <br> <br>
+
+    </section>
+
+    <footer>
+        <section>
+        </section>
+    </footer>
+
+    
+</body>
+</html>
