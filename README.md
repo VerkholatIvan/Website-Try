@@ -2,7 +2,8 @@
 
 !!! Before opening the site YOU MUST unzip the file by pressing with right mouse button and select "EXTRACT ALL"!!! <br>
 
-If the conditions will not be met, the website will not work. <br><br><br>
+If the conditions will not be met, the website will not work. <br>
+If you want to see only the code you can open the usual folder, not the zip file <br><br><br>
 
 
 
